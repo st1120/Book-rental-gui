@@ -45,9 +45,7 @@ def returnn():
     
     issueSql = "delete from "+issueTable+" where bid = '"+bid+"'"
   
-    print(bid in allBid)
-    print(status)
-    updateStatus = "update "+bookTable+" set status = 'avail' where bid = '"+bid+"'"
+    updateStatus = "update "+bookTable+" set status = 'not issued' where bid = '"+bid+"'"
     try:
         if bid in allBid and status == True:
             cur.execute(issueSql)

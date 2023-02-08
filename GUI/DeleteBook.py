@@ -24,7 +24,7 @@ def deleteBook():
         con.commit()
         cur.execute(deleteIssue)
         con.commit()
-        cur.execute("delete from Student where book id = '"+bid+"'")
+        cur.execute("delete from Student where bookid = '"+bid+"'")
         con.commit()
         messagebox.showinfo('Success',"Book Record Deleted Successfully")
     except:
